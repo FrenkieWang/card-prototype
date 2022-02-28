@@ -23,7 +23,7 @@
   }
   
   /* Position the front and back side */
-  .flip-card-front, .flip-card-back {
+  .flip-card-back, .flip-card-front{
     position: absolute;
     width: 100%;
     height: 100%;
@@ -32,13 +32,13 @@
   }
   
   /* Style the front side (fallback if image is missing) */
-  .flip-card-front {
+  .flip-card-back {
     background-color: #bbb;
     color: black;
   }
   
   /* Style the back side */
-  .flip-card-back {
+  .flip-card-front {
     background-color: gold;
     color: black;
     transform: rotateY(180deg);
@@ -52,3 +52,76 @@
     text-align: right;
     padding-right: 40px;
   }
+
+  .name{
+    position:absolute;
+    left:22px;
+    top:22px;
+    font-size:25px;
+    font-weight:bolder;
+  }
+
+  .picture{
+    position: absolute;
+    top:91px;
+    left:37px;
+  }
+
+  .description{
+    position:absolute;
+    left:25px;
+    top:395px;
+    font-size:12px;
+    font-weight:bold;
+    width:250px;
+    text-align:left;
+  }
+
+  .serialnumber{
+    position:absolute;
+    left:194px;
+    top:355px;
+    font-size:8px;
+    font-weight:bold;
+    float:right;
+  }
+
+  .position{
+    position:absolute;
+    left:24px;
+    top:375px;
+    font-size:15px;
+    font-weight:bold;
+  }
+
+.numberCircle {
+    position:absolute;
+    left:250px;
+    top:450px;
+    display: inline-block;
+    border-radius: 50%;
+    border: 3px solid black;
+    font-size: 16px;
+    font-family: monospace;
+    font-weight: bolder;
+    color:black;
+    background-color:ghostwhite;
+    user-select: none; /* gets rid of annoying text select */
+}
+
+.numberCircle:before,
+.numberCircle:after {
+    content: '\200B';
+    display: inline-block;
+    line-height: 0px;
+    padding-top: 50%;
+    padding-bottom: 50%;
+}
+
+.numberCircle::before {
+    padding-left: 0.35em;
+}
+
+.numberCircle::after {
+    padding-right: 0.35em;
+}
